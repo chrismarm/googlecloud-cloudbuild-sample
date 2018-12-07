@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: sampleapp-production
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: sampleapp-production
+      labels:
+        app: sampleapp
+        env: production
+    spec:
+      containers:
+      - name: sampleapp
+        image: eu.gcr.io/tonal-justice-216711/sample-cloudbuild
+        imagePullPolicy: Always
+        ports:
+        - name: nginx
+          containerPort: 80
