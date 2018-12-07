@@ -1,5 +1,3 @@
 docker build -t sample-cloudbuild .
 docker tag sample-cloudbuild $IMAGE_FULLNAME
 docker push $IMAGE_FULLNAME
-kubectl apply -f k8s-app/sampleapp-production.yaml
-kubectl apply -f k8s-app/sampleapp-service.yaml
