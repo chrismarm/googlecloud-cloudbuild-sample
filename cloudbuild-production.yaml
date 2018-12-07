@@ -9,7 +9,7 @@ steps:
   - image
   - deployment
   - sampleapp-production
-  - sampleapp=gcr.io/$PROJECT_ID/sample-cloudbuild:$REVISION_ID
+  - sampleapp=eu.gcr.io/$PROJECT_ID/sample-cloudbuild:$REVISION_ID
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=${_ZONE}'
   - 'CLOUDSDK_CONTAINER_CLUSTER=${_CLUSTER}'
